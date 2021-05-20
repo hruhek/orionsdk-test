@@ -40,8 +40,18 @@ python solarwinds.py
 ```
 
 ## Run tests
+
 ```shell
 pytest
+```
+
+## Tox
+
+Tox is configured to run tests in PY2 and PY3 virtual environments.
+It assumes that PY2 and PY3 are installed and working. To start tox execute:
+
+```shell
+tox
 ```
 
 # Docs
