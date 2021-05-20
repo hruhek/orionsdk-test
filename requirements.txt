@@ -1,4 +1,2 @@
 orionsdk
 python-dotenv
-pytest
-requests-mock
