@@ -1,7 +1,6 @@
 import json
 import os
 
-import requests_mock
 from dotenv import load_dotenv
 from six import PY3
 
@@ -11,9 +10,8 @@ load_dotenv()
 QUERY_URL = 'https://%s:17778/SolarWinds/InformationService/v3/Json/Query' % os.getenv('ORION_SERVER')
 
 
-@requests_mock.Mocker()
-def test_do_query(m):
-    m.post(QUERY_URL, text=read_file('example_data.json'))
+def test_do_query(requests_mock):
+    requests_mock.post(QUERY_URL, text=read_file('example_data.json'))
     result = do_query("SELECT ServerName FROM Orion.Engines")
     assert result == 'some results'
 

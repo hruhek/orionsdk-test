@@ -42,3 +42,12 @@ python solarwinds.py
 ```shell
 pytest
 ```
+
+# Docs
+
+* [pytest](https://docs.pytest.org)
+* [requests-mock](https://requests-mock.readthedocs.io/en/latest/index.html)
+
+## No need for @requests_mock.Mocker with pytest
+`pytest` has its own method of registering and loading custom fixtures. `requests-mock` provides an external fixture 
+registered with pytest such that it is usable simply by specifying it as a parameter. [Read more](https://requests-mock.readthedocs.io/en/latest/pytest.html)
