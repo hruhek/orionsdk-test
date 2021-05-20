@@ -1,0 +1,3 @@
+orionsdk
+python-dotenv
+requests-mock
