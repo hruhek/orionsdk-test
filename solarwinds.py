@@ -24,16 +24,16 @@ def do_query(query_str):
 
     # Get a current list of polling engines
     logging.debug('before query')
-    queryEngines = swis.query(query_str)
+    query_engines = swis.query(query_str)
     logging.debug('after query')
 
     # Assign the list of dictionaries with polling engine information to a variable
-    result = queryEngines["results"]
-    return result
+    results = query_engines["results"]
+    return results
 
 
 if __name__ == '__main__':
     logging.info('start')
-    result = do_query("SELECT ServerName FROM Orion.Engines")
-    logging.info('do_query result: %s' % result)
+    query_result = do_query("SELECT ServerName FROM Orion.Engines")
+    logging.info('do_query result: %s' % query_result)
     logging.info('end')
