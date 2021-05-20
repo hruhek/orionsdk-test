@@ -20,7 +20,8 @@ ORION_USER=username
 ORION_PASSWORD=s3cr3t!
 ```
 
-Set environment variables to match you host, user and password. File pattern is already in `.env` is in `.gitignore`.
+Set environment variables to match you host, user and password. 
+File pattern for the `.env`file is already in `.gitignore`.
 
 ## Dependencies
 
